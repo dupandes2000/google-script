@@ -5,8 +5,7 @@ function insertData(dataUpdates) {
   const dataSheet = getDataSheet(SHEET_NAME); 
   const keys = dataSheet.length ? Object.keys(dataSheet[0]) : []; 
   
-  const rowIndex = dataSheet.findIndex(item => item.id == dataUpdates.id
-  && item.symbol === dataUpdates.symbol) + 2; 
+  const rowIndex = dataSheet.findIndex(item => item.id == dataUpdates.id) + 2; 
   
   if (rowIndex > 1) {
     Object.entries(dataUpdates).forEach(([key, value]) => {
